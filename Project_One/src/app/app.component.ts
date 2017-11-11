@@ -3,7 +3,7 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { HomePage } from '../pages/home/home';
+import { FrontPage } from '../pages/front/front';
 import { ListPage } from '../pages/list/list';
 import { FeedPage } from '../pages/feed/feed';
 
@@ -13,21 +13,24 @@ import { FeedPage } from '../pages/feed/feed';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = FrontPage;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{title: string, component: any, name: any}>;
+
+  p = this.pages{1};
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage, name: 'home' },
+      { title: 'Front', component: FrontPage, name: 'front' },
       { title: 'List', component: ListPage, name: 'list' },
       { title: 'Feed', component: FeedPage, name: 'paper' },
-      {title:  'Fake', component: FeedPage, name: 'alert' },
+      { title: 'Fake', component: FeedPage, name: 'alert' },
 
     ];
+
 
   }
 
