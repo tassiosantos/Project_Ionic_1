@@ -16,9 +16,7 @@ export class MyApp {
   rootPage: any = FrontPage;
 
   pages: Array<{title: string, component: any, name: any}>;
-
-  p = this.pages{1};
-
+  
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
