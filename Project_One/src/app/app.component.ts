@@ -3,9 +3,11 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+
+
 import { FrontPage } from '../pages/front/front';
-import { ListPage } from '../pages/list/list';
-import { FeedPage } from '../pages/feed/feed';
+// import { NovaviagemPage } from '../pages/novaviagem/novaviagem';
+
 
 @Component({
   templateUrl: 'app.html'
@@ -16,16 +18,14 @@ export class MyApp {
   rootPage: any = FrontPage;
 
   pages: Array<{title: string, component: any, name: any}>;
-  
+
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Front', component: FrontPage, name: 'front' },
-      { title: 'List', component: ListPage, name: 'list' },
-      { title: 'Feed', component: FeedPage, name: 'paper' },
-      { title: 'Fake', component: FeedPage, name: 'alert' },
+
 
     ];
 

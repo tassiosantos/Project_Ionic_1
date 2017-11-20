@@ -24,3 +24,5 @@ $ ionic cordova run ios
 
 Substitute ios for android if not on a Mac.
 
+# Project_Ionic_1
+Teste com o git

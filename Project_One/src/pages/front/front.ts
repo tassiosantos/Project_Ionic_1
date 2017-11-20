@@ -1,29 +1,41 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { SigninPage } from '../signin/signin';
-import { SignupPage } from '../signup/signup';
+import { NovaviagemPage } from '../novaviagem/novaviagem';
+import { NovaViagemProvider } from '../../providers/globaldataprovider/globaldataprovider';
+
 
 @Component({
   selector: 'page-front',
-  templateUrl: 'front.html'
+  templateUrl: 'front.html',
+
 })
+
 export class FrontPage {
 
+
+  viagens: any;
 
 
   constructor(
     public navCtrl: NavController,
     // public navParams: NavParams
-  ) {
+    public travelist: NovaViagemProvider,
+   ) {
 
   }
 
-  goToSingin(){
-    this.navCtrl.push(SigninPage)
-  }
 
-  goToSignup(){
-    this.navCtrl.push(SignupPage)
-  }
+
+
+ goToTeste(){
+   this.navCtrl.push(NovaviagemPage)
+ }
+
+ public getTravel(){
+   
+  //  name: this.viagens.nome;
+  //  descri: this.viagens.descri;
+   }
+
 
 }

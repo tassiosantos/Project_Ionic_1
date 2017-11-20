@@ -1,26 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { NativeStorage } from '@ionic-native/native-storage';
 
 import { MyApp } from './app.component';
 import { FrontPage } from '../pages/front/front';
-import { ListPage } from '../pages/list/list';
-import { FeedPage } from '../pages/feed/feed';
-import { SigninPage } from '../pages/signin/signin'
-import { SignupPage } from '../pages/signup/signup'
+import { NovaviagemPage } from '../pages/novaviagem/novaviagem';
+import { NovamalaPage } from '../pages/novamala/novamala';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
+import { NovaViagemProvider, Viagem } from '../providers/globaldataprovider/globaldataprovider';
+import { ToastController } from 'ionic-angular';
 
 @NgModule({
   declarations: [
     MyApp,
     FrontPage,
-    ListPage,
-    FeedPage,
-    SigninPage,
-    SignupPage
+    NovaviagemPage,
+    NovamalaPage,
   ],
   imports: [
     BrowserModule,
@@ -30,15 +29,17 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   entryComponents: [
     MyApp,
     FrontPage,
-    ListPage,
-    FeedPage,
-    SigninPage,
-    SignupPage
+    NovaviagemPage,
+    NovamalaPage,
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    NativeStorage,
+    NovaViagemProvider,
+    ToastController,
+    
   ]
 })
 export class AppModule {}

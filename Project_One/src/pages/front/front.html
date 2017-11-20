@@ -1,11 +1,11 @@
-<!-- <ion-header>
+<ion-header>
   <ion-navbar>
-    <button ion-button menuToggle>
+    <!-- <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Front</ion-title>
+    </button> -->
+    <ion-title>Tá na mala</ion-title>
   </ion-navbar>
-</ion-header> -->
+</ion-header>
 
 <ion-content padding>
 
@@ -14,13 +14,22 @@
   <h3>Pagina inicial do aplicativo</h3>
 
    <div class="initpage">
-     <p>TÁ NA MALA</p>
-      <a (click)="goToSingin()">signin</a>
-      <a (click)="  goToSignup()">signup</a>
+
+
+      <div>
+        <a (click)="goToTeste()">Nova Viagem</a>
+      </div>
    </div>
 
 
+   <button ion-button (click)="getTravel()"> Viagens</button>
+   <ion-list>
 
+    <ion-item *ngFor="let v of viagens">
+        <ion-item>Nome: {{v.nome}} Descrição: {{v.descri}}</ion-item>
+    </ion-item>
+
+   </ion-list>
 
 
 
